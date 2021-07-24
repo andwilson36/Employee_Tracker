@@ -1,6 +1,8 @@
 const express = require('express');
 const mysql = require('mysql2');
 const Prompt = require('./js/prompt');
+const Logo = require('./js/logo');
+const logo = new Logo();
 const displayPrompt = new Prompt();
 // PORT
 const PORT = process.env.PORT || 3001;
@@ -17,6 +19,7 @@ const db = mysql.createConnection(
         password: 'password',
         database: 'employee_db'
     },
+    logo.displayLogo(),
     console.info('Connected to database successfully.')
 );
 

@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 
-function Prompt() { }
+function Prompt() {}
 
 Prompt.prototype.menuPrompt = function () {
     inquirer
