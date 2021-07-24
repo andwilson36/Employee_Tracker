@@ -20,17 +20,17 @@ const db = mysql.createConnection(
     console.info('Connected to database successfully.')
 );
 
-db.query('SELECT * FROM department', function (err, results) {
-    console.log(results);
-});
+// db.query('SELECT * FROM department', function (err, results) {
+//     console.log(results);
+// });
 
-// default response
-app.use((req, res) => {
-    res.status(404).end();
-});
+// // default response
+// app.use((req, res) => {
+//     res.status(404).end();
+// });
 
-app.listen(PORT, () => {
-    console.info(`Server listening at ${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.info(`Server listening at ${PORT}`);
+// });
 
-displayPrompt.cmdLinePrompt();
+displayPrompt.menuPrompt();
