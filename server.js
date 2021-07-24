@@ -1,10 +1,12 @@
 const express = require('express');
 const mysql = require('mysql2');
+const Prompt = require('./js/prompt');
+const displayPrompt = new Prompt();
 // PORT
 const PORT = process.env.PORT || 3001;
 // middleware
 const app = express();
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Connect to database
@@ -13,7 +15,7 @@ const db = mysql.createConnection(
         host: 'localhost',
         user: 'root',
         password: 'password',
-        database: 'classlist_db'
+        database: 'employee_db'
     },
     console.info('Connected to database successfully.')
 );
@@ -23,10 +25,12 @@ db.query('SELECT * FROM department', function (err, results) {
 });
 
 // default response
-app.use((req, res => {
+app.use((req, res) => {
     res.status(404).end();
-}));
+});
 
 app.listen(PORT, () => {
     console.info(`Server listening at ${PORT}`);
-})
+});
+
+displayPrompt.cmdLinePrompt();
