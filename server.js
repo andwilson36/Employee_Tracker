@@ -35,5 +35,5 @@ const db = mysql.createConnection(
 // app.listen(PORT, () => {
 //     console.info(`Server listening at ${PORT}`);
 // });
-
+// to display the prompt
 displayPrompt.menuPrompt();
