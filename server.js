@@ -4,6 +4,7 @@ const Prompt = require('./js/prompt');
 const Logo = require('./js/logo');
 const logo = new Logo();
 const displayPrompt = new Prompt();
+import choice from './js/prompt.js';
 // PORT
 const PORT = process.env.PORT || 3001;
 // middleware
@@ -12,8 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Connect to database
-const db = mysql.createConnection(
-    {
+const db = mysql.createConnection({
         host: 'localhost',
         user: 'root',
         password: 'password',
@@ -37,3 +37,4 @@ const db = mysql.createConnection(
 // });
 // to display the prompt
 displayPrompt.menuPrompt();
+console.info(choice);

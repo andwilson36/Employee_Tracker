@@ -2,45 +2,39 @@ const inquirer = require('inquirer');
 
 function Prompt() {}
 
-Prompt.prototype.menuPrompt = function () {
+var choice;
+
+Prompt.prototype.menuPrompt = function() {
     inquirer
-        .prompt([
-            {
-                type: 'list',
-                name: 'menu',
-                message: 'What would you like to do?',
-                choices: ['View All Employees', 'Add Employee', 'Update Employee Role', 'View All Roles', 'Add Role', 'View All Departments', 'Add Department', 'Quit'],
-            }
-        ])
+        .prompt([{
+            type: 'list',
+            name: 'menu',
+            message: 'What would you like to do?',
+            choices: ['View All Employees', 'Add Employee', 'Update Employee Role', 'View All Roles', 'Add Role', 'View All Departments', 'Add Department', 'Quit'],
+        }])
         .then((response) => {
             const result = response.menu;
             switch (result) {
                 case 'View All Employees':
-                    console.log('View All Employees');
-                    break;
+                    return 'View All Employees';
                 case 'Add Employee':
-                    console.log('Add Employee');
-                    break;
+                    return 'Add Employee';
                 case 'Update Employee Role':
-                    console.log('Update Employee Role');
-                    break;
+                    return 'Update Employee Role';
                 case 'View All Roles':
-                    console.log('View All Roles');
-                    break;
+                    return 'View All Roles';
                 case 'Add Role':
-                    console.log('Add Role');
-                    break;
+                    return 'Add Role';
                 case 'View All Departments':
-                    console.log('View All Departments');
-                    break;
+                    return 'View All Departments';
                 case 'Add Department':
-                    console.log('Add Department');
-                    break;
+                    return 'Add Department';
                 case 'Quit':
-                    console.log('Quit');
-                    break;
+                    choice = 'Quit';
+                    return 'Quit';
             }
         })
 }
 
+module.exports = { choice };
 module.exports = Prompt;

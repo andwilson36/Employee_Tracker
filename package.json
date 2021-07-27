@@ -1,7 +1,8 @@
 {
-  "dependencies": {
-    "express": "^4.17.1",
-    "inquirer": "^8.1.2",
-    "mysql2": "^2.2.5"
-  }
+    "type": "module",
+    "dependencies": {
+        "express": "^4.17.1",
+        "inquirer": "^8.1.2",
+        "mysql2": "^2.2.5"
+    }
 }
