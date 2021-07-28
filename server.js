@@ -1,9 +1,8 @@
 const express = require('express');
 const inquirer = require('inquirer');
 const prompter = require('./lib/prompt');
-const table = require('./lib/tableData')
-const db = require('./lib/connection');
-const mysql = require('mysql2');
+const ViewAll = require('./lib/tableData');
+const view = new ViewAll();
 const Logo = require('./lib/logo');
 const logo = new Logo();
 
@@ -22,9 +21,9 @@ function prompt() {
                 case 'View Employees':
                     inquirer.prompt(prompter.menuViewEmployees)
                         .then((response) => {
-                            switch (response) {
+                            switch (response.menu) {
                                 case 'View All Employees':
-                                    table.viewAll()
+                                    view.employees();
                                     break;
                             }
                         })
@@ -65,12 +64,6 @@ function prompt() {
 
 logo.displayLogo()
 
-db.query('SELECT * FROM employee', function(err, results) {
-    console.log(results);
-});
-
-prompt();
-
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    prompt();
 });
