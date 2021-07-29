@@ -13,6 +13,8 @@ A command-line application CMS for a companies employee database. This applicati
 
 ## Instructions 
 
+Short video demo: https://drive.google.com/file/d/1Kp0KgR4t9t67RtHQZV13tZeNl6SH3lFz/view
+
 In the command line use the command below to connect to server and start using data.
 ```
 npm start
