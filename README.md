@@ -6,9 +6,18 @@ A command-line application CMS for a companies employee database. This applicati
 
 ## Table of Contents
 
+**[Instructions](#Instructions)**<br>
 **[Objectives](#Objectives)**<br>
 **[Media](#Media)**<br>
 **[License](#License)**<br>
+
+## Instructions 
+
+In the command line use the command below to connect to server and start using data.
+```
+npm start
+```
+You will be prompted with a menu of actions that will ask you what to do after every command until you select 'quit'. 
 
 ## Objectives
 
@@ -25,10 +34,13 @@ A command-line application CMS for a companies employee database. This applicati
 ## Media
 
 This is a image showing the beginning of the application on the command line.
-![](/public/assets/images/landing.png)
+![](/assets/start.png)
 
-This is a image showing how the user can make notes, save them, access older notes and, delete notes.
-![](/public/assets/images/list.png)
+This is a image showing a table of data pulled from the SQL server.
+![](/assets/table.png)
+
+This is a image showing some logic in the JavaScript code of the application, sending the user provided data into the server.
+![](/assets/snippet.png)
 
 ## License
 The source code is licensed under MIT.
