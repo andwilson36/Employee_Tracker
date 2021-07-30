@@ -30,7 +30,7 @@ You will be prompted with a menu of actions that will ask you what to do after e
 
 ✔️ User can save chnages to database and retrieve them. 
 
-✔️ Data is shown in a easy to read table.
+✔️ Data is shown in a easy-to-read table.
 ```
 
 ## Media
