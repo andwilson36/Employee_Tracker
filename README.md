@@ -24,7 +24,7 @@ You will be prompted with a menu of actions that will ask you what to do after e
 ## Objectives
 
 ```
-✔️ Uses a sql server to hold data.
+✔️ Uses a SQL server to hold data.
 
 ✔️ Modifies the database by the users commands.
 
