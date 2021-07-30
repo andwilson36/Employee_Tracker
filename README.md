@@ -42,6 +42,7 @@ This is a image showing a table of data pulled from the SQL server.
 ![](/assets/table.png)
 
 This is a image showing some logic in the JavaScript code of the application, sending the user provided data into the server.
+
 ![](/assets/snippet.png)
 
 ## License
